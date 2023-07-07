@@ -45,6 +45,13 @@ public class AblCustomizingConfig {
 | RRSUBAPPL| sub APP ID| 녹화된 이력 그대로 사용| Service Class의 처음 2글자| NCRM 에서 사용되는 데이터| 
 
 
+### 3. 소스분석, 화면녹화시 URL Mapping 기능 정리 
+> URL : /svc/ui/atworks.json, URL-PATTERN : /svc/ui/%.json 으로 입력되는 방식 업무 코드에 따라 (atworks.json, %.json) 을 제외하고는 달라질 수 있음   
+> 이후 화면녹화시 layout을 찾을떄 /svc/ui/{화면ID}.json 으로 와도 URL-PATTERN과 비교하기 떄문에 layout 검색에 문제가 없음 ( ServiceId + URL pattern + Http method 로 일치 여부 확인하고 있음)
 
+
+### 4. 시스템 코드 
+naf-> RSRETURN 가 0000은 서비스 호출여부이며, 실제 응답 코드는 header -> svrTrtRsltList -> svrTrtRsltCd, svrTrtRsltCntnt 로 지정합니다.    
+svrTrtRsltList 가 있는 경우 svrTrtRsltCd->SystemCode, svrTrtRsltCntnt->SystemMessage 가 되는 방식
 
 
