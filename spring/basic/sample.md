@@ -54,4 +54,22 @@ public class AblCustomizingConfig {
 naf-> RSRETURN 가 0000은 서비스 호출여부이며, 실제 응답 코드는 header -> svrTrtRsltList -> svrTrtRsltCd, svrTrtRsltCntnt 로 지정합니다.    
 svrTrtRsltList 가 있는 경우 svrTrtRsltCd->SystemCode, svrTrtRsltCntnt->SystemMessage 가 되는 방식
 
+### 5. ABL 응답 데이터에 시스템코드, 메시지 추가로 보여줍니다.
 
+```
+@Override
+public JsonNode changeResponseBodyIntermediate(JsonNode jsonBody) {
+
+    if (jsonBody.has(abl.FORM_USER_KEY)) {
+        JsonNode resultJsonNode = jsonBody.get(abl.FORM_USER_KEY);
+        // SystemCode, SystemResult 처리여부
+        if (resultJsonNode instanceof ObjectNode) {
+            SystemInfo systemResult = getSystemResult(null, jsonBody);
+            ((ObjectNode) resultJsonNode).put(abl.TRAN_CODE_NAME, systemResult.getSystemCode());
+            ((ObjectNode) resultJsonNode).put(abl.TRAN_MESSAGE_NAME, systemResult.getSystemMessage());
+        }
+        return resultJsonNode;
+    }
+    return super.changeResponseBodyIntermediate(jsonBody);
+}
+```
