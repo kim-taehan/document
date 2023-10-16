@@ -1,5 +1,5 @@
 ## Sealed Class
-> Sealed Class, Interface는 간단하게 상속하거나(extends), 구현(implements)할 클래스를 지정해두고  
+> sealed class, interface는 간단하게 상속하거나(extends), 구현(implements)할 클래스를 지정해두고  
 > 해당 클래스들만 상속 혹은 구현을 허용하는 키워드입니다. (자바 17)
 
 ### final과 비교
