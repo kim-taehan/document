@@ -110,9 +110,6 @@ XXXServiceImpl은 절대 다른 클래스로 변경되지 않는데도. Inteface
 1995년 GoF(Gang of Four)라고 불리는 Erich Gamma, Richard Helm, Ralph Johnson, John Vissides가 처음으로 디자인 패턴을 구체화하였다.
 GoF의 디자인 패턴은 소프트웨어 공학에서 가장 많이 사용되는 디자인 패턴이다.
 목적에 따라 분류할 시 생성 패턴 5개, 구조 패턴 7개, 행위 패턴 11개, 총 23개의 패턴으로 구성된다.
-```
-#### 아키텍처 공부한 내용을 같이 이야기 해달라고 해서 공유합니다.
-![image](https://github.com/kim-taehan/document/assets/52950400/3a22183c-7904-4c34-ad2d-7863792fc650)
 
 #### GoF 패턴마다 샘플 작성하고 정리한 [github](https://github.com/kim-taehan/gof)
 - https://github.com/kim-taehan/gof
@@ -168,9 +165,6 @@ GoF의 디자인 패턴은 소프트웨어 공학에서 가장 많이 사용되�
 그리고 현재에도 저와 친한 개발자들은 금융 도메인은 너무 복잡해 테스트 코드 작성하지 못한다고 말한다.
 `클린 임베디드 아키텍처는 테스트하기 쉬운 임베디드 아키텍처다.` 
 ```
-
-#### 아키텍처 공부한 내용을 같이 이야기 해달라고 해서 공유합니다.
-![image](https://github.com/kim-taehan/document/assets/52950400/11ebc853-b558-4ff4-9895-568f94e5492c)
 
 
 > 테스트 코드는 반드시 작성해야 된다고 생각하기 시작했다. 구조적으로 테스트 코드를 작성하기 힘들다면, 그 구조가 변경할려고 노력하는 것이 필요할 것 같다.
